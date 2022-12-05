@@ -1,0 +1,38 @@
+html 
+  head 
+    title Show Details
+body 
+include boot.html 
+include header.pug
+nav(aria-label='breadcrumb')
+  ol.breadcrumb
+    li.breadcrumb-item.active(aria-current='page')
+nav(aria-label='breadcrumb',style="margin-left:20px")
+  ol.breadcrumb
+    li.breadcrumb-item
+      a(href='/') Home
+    li.breadcrumb-item.active(aria-current='page') ContactDetails
+table.table.table-striped
+  thead
+    tr
+      th(scope='col') #
+      th(scope='col') Name
+      th(scope='col') Email
+      th(scope='col') Age
+      th(scope='col') City
+
+  //- -let files = file;
+  -for(let i = 0,j=1; i < file.length; j++,i++){ 
+    -r=j
+    -h=file[i].split("|") 
+    tbody
+      tr
+        th(scope='row')=r
+
+        td=h[0]
+        td=h[1]
+        td=h[3]
+        td=h[4]
+  -}
+
+include footer.pug

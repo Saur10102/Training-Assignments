@@ -1,0 +1,64 @@
+html 
+head 
+title Services 
+link(rel="stylesheet", href="./css/services.css")
+body 
+include boot.html 
+include header.pug
+nav(aria-label='breadcrumb')
+  ol.breadcrumb
+    li.breadcrumb-item.active(aria-current='page')
+nav(aria-label='breadcrumb',style="margin-left:20px")
+  ol.breadcrumb
+    li.breadcrumb-item
+      a(href='/') Home
+    li.breadcrumb-item.active(aria-current='page') Services
+// ======= Services Section =======
+section#services.services.section-bg
+  .container(data-aos='fade-up')
+    .section-title
+      h2(style="text-align:center;padding:20px") Services
+      p
+        | NeoSOFT brings in deep domain and industry experience to build unique perspectives and meet the challenging requirements of clients from diverse industries. Leveraging the unique triple bottom line approach, we have achieved tangible results and unlocked opportunities for growth, innovation, and value creation.
+    .row
+      .col-xl-3.col-md-6.d-flex.align-items-stretch(data-aos='zoom-in' data-aos-delay='100')
+        .icon-box
+          .icon
+            i.bx.bxl-dribbble
+          h4
+            a(href='') Digital Transformation
+          p Enabling business by leveraging technology and building a solid and sustaineddigital ecosystem.
+      .col-xl-3.col-md-6.d-flex.align-items-stretch.mt-4.mt-md-0(data-aos='zoom-in' data-aos-delay='200')
+        .icon-box
+          .icon
+            i.bx.bx-file
+          h4
+            a(href='') Artificial Intelligence
+          p Augumenting human intelligence with artificial intelligence to maximize business outcomes.
+      .col-xl-3.col-md-6.d-flex.align-items-stretch.mt-4.mt-xl-0(data-aos='zoom-in' data-aos-delay='300')
+        .icon-box
+          .icon
+            i.bx.bx-tachometer
+          h4
+            a(href='') Big Data And Analytics
+          p Empowering business with pragmatic, scalable, and cost-effective data science solutions.
+      .col-xl-3.col-md-6.d-flex.align-items-stretch.mt-4.mt-xl-0(data-aos='zoom-in' data-aos-delay='400')
+        .icon-box
+          .icon
+            i.bx.bx-layer
+          h4
+            a(href='') Application Developement
+          pAccelerating large-scale deployments with ceaseless evolution in DevOps and synching releases with maturing business objectives.
+// End Services Section
+// ======= Cta Section =======
+section#cta.cta
+  .container(data-aos='zoom-in')
+    .row
+      .col-lg-9.text-center.text-lg-start
+        h3 Call To Action
+        p
+          | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .col-lg-3.cta-btn-container.text-center
+        a.cta-btn.align-middle(href='#') Call To Action
+// End Cta Section
+include footer.pug

@@ -1,0 +1,32 @@
+html 
+head 
+title Gallary 
+body 
+include boot.html 
+include header.pug 
+nav(aria-label='breadcrumb')
+  ol.breadcrumb
+    li.breadcrumb-item.active(aria-current='page')
+nav(aria-label='breadcrumb',style="margin-left:20px")
+  ol.breadcrumb
+    li.breadcrumb-item
+      a(href='/') Home
+    li.breadcrumb-item.active(aria-current='page') Gallary
+-let array =["https://cdn.pixabay.com/photo/2022/07/20/18/44/reading-7334749_960_720.png","https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844226_960_720.png","https://cdn.pixabay.com/photo/2022/07/24/19/42/bike-7342379__340.png","https://cdn.pixabay.com/photo/2021/03/15/17/35/garden-6097539_960_720.png","https://cdn.pixabay.com/photo/2022/10/03/23/41/house-7497001_960_720.png"];
+.container(style="margin-bottom:20px")
+  h1(style="text-align:center;padding:20px") Gallary 
+  -for(let i=0;i<array.length;i+=2){
+    .row.p-4(style="margin-top:20px")
+      .col-sm-6
+        .responsive
+        .gallery
+          a(target='_blank' href='#')
+          img(src=array[i] alt='Cinque Terre' width='500' height='300')
+      .col-sm-6
+        .responsive
+        .gallery
+          a(target='_blank' href='#')
+          img(src=array[i+1] alt='Cinque Terre' width='500' height='300')
+        -}
+
+include footer.pug
